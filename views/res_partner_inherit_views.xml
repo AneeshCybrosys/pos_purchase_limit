@@ -5,9 +5,14 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='property_payment_term_id']" position="after">
+            <xpath expr="//field[@name='property_payment_term_id']"
+                   position="after">
                 <field name="purchase_limit"/>
-                <field name="limit" attrs="{'invisible': [('purchase_limit','=', False)]}"/>
+                <field name="currency_id" invisible="1"/>
+                <field name="limit"
+                       attrs="{'invisible': [('purchase_limit','=', False)]}"
+                       widget="monetary"
+                       options="{'currency_field': 'currency_id'}"/>
             </xpath>
         </field>
     </record>

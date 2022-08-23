@@ -18,9 +18,6 @@
         'views/res_partner_inherit_views.xml',
     ],
     'assets': {
-    #     'web.assets_qweb': [
-    #         'pos_product_brand/static/src/xml/pos_product_brand.xml',
-    #     ],
         'web.assets_backend': [
             'pos_purchase_limit/static/src/js/purchase_limit.js',
         ]
